@@ -1,0 +1,12 @@
+server.port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/users_db
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate.ddl-auto: update
+  artemis: # pour JMS standardiser côté clients consumers/producers
+    mode: native
+  jms:
+    pub-sub-domain: true
